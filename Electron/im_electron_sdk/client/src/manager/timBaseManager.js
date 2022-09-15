@@ -5,13 +5,13 @@ const TimBaseManager = {
     callExperimentalAPI: () => {
         return timRenderInstance.callExperimentalAPI({
             json_param: {
-                request_internal_operation: 'internal_operation_set_custom_server_info',
+                request_internal_operation: '',
                 request_set_custom_server_info_param: {
                   longconnection_address_array: [{
-                        server_address_ip: "cjscim.cjsc.com.cn",// ip
-                        server_address_port: 8890 // 端口
+                        server_address_ip: "",// ip
+                        server_address_port:0  // 端口
                   }],
-                  server_public_key: '0436ddd1de2ec99e57f8a796745bf5c639fe038d65f9df155e3cbc622d0b1b75a40ee49074920e56c6012f90c77be69f7f'// 公钥
+                  server_public_key: ''// 公钥
                 }
             }
         })
@@ -21,17 +21,9 @@ const TimBaseManager = {
     },
     TIMLogin: () => {
         return timRenderInstance.TIMLogin({
-            userID: "109442",
-            userSig: "eJyrVgrxCdYrSy1SslIy0jNQ0gHzM1NS80oy0zLBwoYGliYmRlCZ4pTsxIKCzBQlK0MTAwNTS3MDSwOITGpFQWZRKlDc1NTUyMAAKlqSmQsSMzMxN7U0NjaGihZnpgMNTjJ3DnLKyXL1TIo0CHdNSnbJCbXMN-aoDIxyt-RKM-BKjir2rnIKDy-zd7RVqgUAuD8wOg__",
+            userID: "",
+            userSig: "",
         })
-        // return timRenderInstance.TIMLogin({
-        //     userID: "d00617420",
-        //     userSig: "eJw1jMEKgkAUAP-lnUOeq7um0MFDtIQQYRDsTdrVHpKtupgR-XumdZwZmBecstwbTAcJMA9hNTNp0zgqadYaUfhRyP6x13VhLWlI-PCb4liwpZjRUmcgERiuERfn6DYZX-CARcgD-ntQNZ3lw5VPa9qxceaQ73Sm20Ed64JJdYmu9*2*VuehlxzTdAPvDy5rMhY_",
-        // })
-        //  return timRenderInstance.TIMLogin({
-        //     userID: "100125395",
-        //     userSig: "eJyrVgrxCdZLrSjILEpVsrIwMzEw0AELlaUWKVkpGekZKEH4xSnZiQUFmSlKVoZANWZGJhaWlhCZzJTUvJLMtEywBkMDA0MjU2NLU5i2zHSgqE9KcI6nmVFEYYpfsqN7TnCmiY92TnpJmKtPRHpZuH9GlIFFUa5TSqhlloUtVGNJZi7QQYZmpmZmpuYmxma1ABx3MJA_",
-        // })
         
     },
     TIMInvite: () => {
